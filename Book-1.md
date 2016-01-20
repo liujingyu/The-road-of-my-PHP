@@ -74,4 +74,84 @@ opcache.enable= On
 
 http://php.net/manual/zh/opcache.configuration.php
 
+
+
+[session]
+
+;session.save_handler 定义了来存储和获取与会话关联的数据的处理器的名字。默认为 files。
+
+session.save_handler = files
+
+;session.save_path 定义了传递给存储处理器的参数。如果选择了默认的 files 文件处理器，则此值是创建文件的路径。默认为 /tmp。
+
+session.save_path = /tmp
+
+;session.name 指定会话名以用做 cookie 的名字。只能由字母数字组成，默认为 PHPSESSID。
+
+session.name = PHPSESSID
+
+;session.auto_start 指定会话模块是否在请求开始时自动启动一个会话。默认为 0（不启动）。无论是通过调用函数 session_start() 手动开启会话， 还是使用配置项 session.auto_start 自动开启会话， 对于基于文件的会话数据保存（PHP 的默认行为）而言， 在会话开始的时候都会给会话数据文件加锁， 直到 PHP 脚本执行完毕或者显式调用 session_write_close() 来保存会话数据。
+在此期间，其他脚本不可以访问同一个会话数据文件。出处：http://php.net/manual/zh/function.session-write-close.php
+
+session.auto_start 0
+
+;session.serialize_handler 定义用来序列化／解序列化的处理器名字。 当前支持 PHP 序列化格式 (名为 php_serialize)、 PHP PHP 内部格式 (名为 php 及 php_binary) 和 WDDX (名为 wddx)。 如果 PHP 编译时加入了 WDDX 支持，则只能用 WDDX。 自 PHP 5.5.4 起可以使用 php_serialize。 php_serialize 在内部简单地直接使用 serialize/unserialize 函数，并且不会有 php 和 php_binary 所具有的限制。 使用较旧的序列化处理器导致 $_SESSION 的索引既不能是数字也不能包含特殊字符(| and !) 。 使用
+php_serialize 避免脚本退出时，数字及特殊字符索引导致出错。 默认使用 php。
+
+session.serialize_handler = php
+
+;session.gc_probability 与 session.gc_divisor 合起来用来管理 gc（garbage collection 垃圾回收）进程启动的概率。默认为 1。
+; Default Value: 1
+; Development Value: 1
+; Production Value: 1
+
+session.gc_probability 1
+
+;session.gc_divisor 与 session.gc_probability 合起来定义了在每个会话初始化时启动 gc（garbage collection 垃圾回收）进程的概率。此概率用 gc_probability/gc_divisor 计算得来。例如 1/100 意味着在每个请求中有 1% 的概率启动 gc 进程。session.gc_divisor 默认为 100。
+
+session.gc_divisor = 1000
+
+;session.gc_maxlifetime 指定过了多少秒之后数据就会被视为“垃圾”并被清除。 垃圾搜集可能会在 session 启动的时候开始（ 取决于session.gc_probability 和 session.gc_divisor）。
+
+session.gc_maxlifetime = 1440
+
+;php5.4 Session提供了上传进度支持，通过$_SESSION["upload_progress_name"]就可以获得当前文件上传的进度信息，结合Ajax就能很容易实现上传进度条了。使用详情见http://www.laruence.com/2011/10/10/2217.html
+
+session.upload_progress.enabled = 1
+
+;session.use_cookies 指定是否在客户端用 cookie 来存放会话 ID。默认为 1（启用）。
+
+session.use_cookies = 1
+
+;session.use_only_cookies 指定是否在客户端仅仅使用 cookie 来存放会话 ID。。启用此设定可以防止有关通过 URL 传递会话 ID 的攻击。此设定是 PHP 4.3.0 添加的。自PHP 5.3.0开始，默认值改为1（启用）
+
+session.use_only_cookies = 1
+
+;session.cookie_lifetime 以秒数指定了发送到浏览器的 cookie 的生命周期。值为 0 表示“直到关闭浏览器”。默认为 0
+
+session.cookie_lifetime = 0
+
+;session.cookie_path 指定了要设定会话 cookie 的路径。默认为 /。
+
+session.cookie_path = /
+
+;session.cookie_domain 指定了要设定会话 cookie 的域名。默认为无，表示根据 cookie 规范产生 cookie 的主机名。
+
+session.cookie_domain = 
+
+
+;如果开启则表明你的cookie只有通过HTTPS协议传输时才起作用。
+
+session.cookie_secure = 1
+
+;Marks the cookie as accessible only through the HTTP protocol. This means that the cookie won't be accessible by scripting languages, such as JavaScript. This setting can effectively help to reduce identity theft through XSS attacks (although it is not supported by all browsers).
+
+session.cookie_httponly =
+
+;深入阅读
+
+http://www.laruence.com/2012/01/10/2469.html
+
+
+
 ###2.4 Docker安装
