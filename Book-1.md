@@ -30,6 +30,33 @@ Example #1 一个介绍性的范例
 
 ###2.1 Linux 安装
 
+首先，php安装主要分为源码编译安装和包安装。
+下面是包安装的命令：
+
+```
+rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+
+yum --enablerepo=remi,remi-php56 -y install php php-common php-cli php-gd php-pear php-mysqlnd php-pdo php-pgsql php-pecl-mongo php-sqlite php-pecl-memcached php-pecl-memcache php-xml php-soap php-mcrypt php-fpm php-redis php-opcache php-mbstring php-xhprof
+```
+
+php选取的web服务器主要有两种Apache和Nginx。目前，大部分高并发的应用一般选取Nginx,nginx支持长连接200w。select，poll，epoll都是IO多路复用的机制。Apache选用的是select,Nginx选用的是epoll。nginx出来比较晚，而且遇到了当今的大并发问题，并将其考虑到nginx设计中，可谓后来居上。与此同时，Apache也不敢是示弱，增加了多线程模式worker，但是php的第三方扩展可能有线程安全问题，所以目前用perfork模式的居多。
+除此之外，还有命令行运行模式。
+
+再次，源码编译安装:
+
+在本示例中，我们仅进行包含 PHP-FPM 和 MySQL 支持的简单配置。
+
+```
+tar zxf php-x.x.x
+
+./configure --prefix=/usr/local/php --enable-fpm --with-mysql
+
+make && make install
+
+
+```
+
 ###2.2 Mac 安装
 
 ###2.3 php.ini解读及常见问题解答
