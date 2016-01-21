@@ -5,7 +5,9 @@
 ##2. 数组技巧
 
 - array_column 返回数组中指定的一列
+
 array array_column(array $input , mixed $column_key [, mixed $index_key ])
+
 array_column() 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键。
 
 Example #1 从结果集中取出first names列:
