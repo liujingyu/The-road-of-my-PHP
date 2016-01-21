@@ -1,4 +1,4 @@
-#第一章 PHP基础知识
+#[第一章 PHP基础知识](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-1.md)
 
 ##1. PHP入门指引
 
