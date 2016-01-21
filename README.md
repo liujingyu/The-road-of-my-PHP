@@ -1,16 +1,17 @@
-我的PHP之路
-============
-#第一章 PHP基础知识
+THE ROAD OF MY PHP
+=====================
+
+#[第一章 PHP基础知识](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-1.md)
 
 ##1. PHP入门指引
 ##2. PHP 安装及配置 
 ###2.1 Linux 安装
 ###2.2 Mac 安装
-###2.3 php.ini解读及使用说明
+###2.3 php.ini解读及常见问题解答
 ###2.4 Docker安装
 
 
-#第二章 PHP编写规范
+#[第二章 PHP编写规范](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-2.md)
 
 ##1. PHP Standards Recommendations（PSRs）介绍
 ##2. PSRs 基本代码规范 
@@ -21,14 +22,14 @@
 ##7. PHP 代码风格持续集成工具 -- StyleCI
 
 
-#第三章 PHP编写中的技巧
+#[第三章 PHP编写中的技巧](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-3.md)
 
 ##1. 字符串技巧
 ##2. 数组技巧
 ##3. 编写技巧
 
 
-#第四章 常用的PHP扩展介绍
+#[第四章 常用的PHP扩展介绍](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-4.md)
 
 ##1. 代码缓存扩展：Opcache(Zend Opcache+)、XCache、APC、eAccelerator
 ##2. 数据库扩展：Mysql、Mysqli、PDO、Sqlite、Redis、Memcache、Memcached、Mongo
@@ -45,19 +46,19 @@
 ##2. Pear
 
 
-#第六章 PHP主流的框架
+#[第六章 PHP主流的框架](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-6.md)
 
 ##1. 为什么MVC框架这么流行？
 ##2. Laravel 
 ##3. Symfony2
 ##4. CodeIgniter
 ##5. Zend Framework 2
-##6. Yii Framework（中国人搞的，薛强）
+##6. Yii Framework
 ##7. ThinkPHP
 ##8. Yaf
 
 
-#第七章 PHP设计模式｛高频的优先｝
+#[第七章 PHP设计模式](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-7.md)
 
 ##1. 什么是设计模式
 ##2. Creational (创建型)
