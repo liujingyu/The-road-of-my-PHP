@@ -78,6 +78,45 @@ Array
 
 more: http://php.net/manual/zh/function.array-column.php
 
+- array_unique vs array_flip vs array_keys
+
+```
+$test=array();
+for($run=0; $run<1000; $run++)
+$test[]=rand(0,100);
+
+$time=microtime(true);
+
+for($run=0; $run<100; $run++)
+$out=array_unique($test);
+
+$time=microtime(true)-$time;
+echo 'Array Unique: '.$time."\n";
+
+$time=microtime(true);
+
+for($run=0; $run<100; $run++)
+$out=array_keys(array_flip($test));
+
+$time=microtime(true)-$time;
+echo 'Keys Flip: '.$time."\n";
+
+$time=microtime(true);
+
+for($run=0; $run<100; $run++)
+$out=array_flip(array_flip($test));
+
+$time=microtime(true)-$time;
+echo 'Flip Flip: '.$time."\n";
+```
+运行结果:
+
+```
+Array Unique: 0.20008397102356
+Keys Flip: 0.0058798789978027
+Flip Flip: 0.0052719116210938
+```
+
 
 ##3. 编写技巧
 
