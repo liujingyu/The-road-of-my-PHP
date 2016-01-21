@@ -76,7 +76,26 @@ Array
 )
 ```
 
+more: http://php.net/manual/zh/function.array-column.php
 
 
 ##3. 编写技巧
 
+- 去掉else
+
+```
+if (isset($shopIds[$goods_id]) {
+    $open = true;
+} else {
+    $open = false;
+}
+```
+
+可改为：
+```
+$open = false;
+if (isset($shopIds[$goods_id]) {
+    $open = true;
+}
+
+```
