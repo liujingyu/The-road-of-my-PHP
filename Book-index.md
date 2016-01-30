@@ -1,7 +1,7 @@
 #[第一章 PHP基础知识](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-1.md)
 
 ##1. PHP入门指引
-##2. PHP 安装及配置 
+##2. PHP 安装及配置
 ###2.1 Linux 安装
 ###2.2 Mac 安装
 ###2.3 php.ini解读及常见问题解答
@@ -11,7 +11,7 @@
 #[第二章 PHP编写规范](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-2.md)
 
 ##1. PHP Standards Recommendations（PSRs）介绍
-##2. PSRs 基本代码规范 
+##2. PSRs 基本代码规范
 ##3. PSRs 代码风格规范
 ##4. PSRs 日志接口规范
 ##5. PSRs Autoloader Standard
@@ -37,7 +37,7 @@
 ##7. 消息队列：ZeroMQ
 
 
-#第五章 PHP包管理器
+#[第五章 PHP包管理器](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-5.md)
 
 ##1. Composer
 ##2. Pear
@@ -46,7 +46,7 @@
 #[第六章 PHP主流的框架](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-6.md)
 
 ##1. 为什么MVC框架这么流行？
-##2. Laravel 
+##2. Laravel
 ##3. Symfony2
 ##4. CodeIgniter
 ##5. Zend Framework 2
@@ -113,10 +113,10 @@
 
 #第十一章 PHP运行在的WEB服务器
 
-##1. PHP 5.4.0 内置Web Server 
+##1. PHP 5.4.0 内置Web Server
 ##2. Nginx 安装配置及时用
 ##3. Apache 安装配置及时用
-##4. Nignx vs Apache 
+##4. Nignx vs Apache
 
 
 #第十二章 PHP社区及高价值博客
