@@ -57,7 +57,10 @@
 
 #[第七章 PHP设计模式](https://github.com/liujingyu/The-road-of-my-PHP/blob/master/Book-7.md)
 
-##1. 什么是设计模式
+##1. 设计模式介绍及原则
+###1.1 什么是设计模式
+###1.2 设计原则
+
 ##2. Creational (创建型)
 ###2.1 Simple Factory
 ###2.2 Factory Method
