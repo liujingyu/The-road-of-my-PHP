@@ -129,6 +129,16 @@ c) 你声明你所依赖的东西。
 
 d) Composer 会找出哪个版本的包需要安装，并安装它们（将它们下载到你的项目中）
 
+常见问题:
+* 如何为我的框架自定义一个资源包安装目录？
+答:见:http://docs.phpcomposer.com/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html
+
+* 我应该提交 vendor 目录中的依赖包吗？
+答：一般情况下 不建议。vendor 目录（或者你安装依赖的其它目录）都应该被添加进 .gitignore/svn:ignore/等等。
+详细见:http://docs.phpcomposer.com/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html
+* 为什么 Composer 不递归加载储存库？
+答: 见:http://docs.phpcomposer.com/faqs/why-can%27t-composer-load-repositories-recursively.html
+
 
 ##2. Pear
 
