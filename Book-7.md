@@ -53,8 +53,11 @@
 * 迪米特法则(Law of Demeter，LoD：系统中的类,尽量不要与其他类互相作用,减少类之间的耦合度)
 
     定义：又叫最少知识原则（Least Knowledge Principle或简写为LKP）几种形式定义：
+
     (1) 不要和“陌生人”说话。英文定义为：Don't talk to strangers.
+
     (2) 只与你的直接朋友通信。英文定义为：Talk only to your immediatefriends.
+
     (3) 每一个软件单位对其他的单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。
 
 
