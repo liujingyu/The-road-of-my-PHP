@@ -8,14 +8,17 @@
 ###1.2 设计原则
 
 * 单一职责原则(Single Responsibility Principle, SRP)
+
     定义:一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中。（Every object should have a single responsibility, and that responsibility should be entirely encapsulated by the class.），即又定义有且仅有一个原因使类变更。
     类的职责要单一，不能将太多的职责放在一个类中。（高内聚、低耦合）
 
 * 开闭原则(Open - Closed Principle, OCP)
+
     定义:一个软件实体(如类、模块和函数)应该对扩展开放，对修改关闭.  意思是,在一个系统或者模块中,对于扩展是开放的,对于修改是关闭的,一个 好的系统是在不修改源代码的情况下,可以扩展你的功能. 而实现开闭原则的关键就是抽象化.
     对扩展开放，对修改关闭（设计模式的核心原则是）
 
 * 里氏代换原则(Liskov Substitution Principle, LSP)
+
     定义：第一种定义方式相对严格：如果对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所有的对象o1都代换成o2时，程序P的行为没有变化，那么类型S是类型T的子类型。
     任何基类可以出现的地方,子类也可以出现
 
@@ -36,6 +39,7 @@
     定义：经常又叫做合成复用原则（Composite ReusePrinciple或CRP），尽量使用对象组合，而不是继承来达到复用的目的。
 
     要尽量使用对象组合,而不是继承关系达到软件复用的目的
+
 * 接口隔离原则
 
     定制服务的例子，每一个接口应该是一种角色，不多不少，不干不该干的事，该干的事都要干。
