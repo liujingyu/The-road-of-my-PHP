@@ -37,7 +37,7 @@ $records = array(
         'last_name' => 'Doe',
     )
 );
- 
+
 $first_names = array_column($records, 'first_name');
 print_r($first_names);
 ?>
@@ -145,6 +145,48 @@ if (isset($shopIds[$goods_id]) {
 }
 
 ```
+
+复杂的else例子
+
+```
+public function addThreeInts($first, $second, $third) {
+    if (is_int($first)) {
+        if (is_int($second)) {
+            if (is_int($third)) {
+                $sum = $first + $second + $third;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
+
+    return $sum;
+}
+```
+改为
+
+```
+public function addThreeInts($first, $second, $third) {
+    if (!is_int($first)) {
+        return null;
+    }
+
+    if (!is_int($second)) {
+        return null;
+    }
+
+    if (!is_int($third)) {
+        return null;
+    }
+
+    return $first + $second + $third;
+}
+```
+
 
 - 表驱动法(一种编程模式)
 
